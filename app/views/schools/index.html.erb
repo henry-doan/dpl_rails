@@ -1,0 +1,21 @@
+<h1>All schools</h1>
+<br />
+
+<!-- What does the user see if there are no schools? -->
+<!-- What does the user see if there are schools -->
+<!-- add a link or a button to create a new school -->
+
+<% if @schools.any? %>
+<!-- loop the school and display them -->
+	<ul>
+		<% @schools.each do |school| %>
+		<li>
+			<%= link_to school.name, school_path(school) %>
+		</li>
+		<% end %>
+	</ul>
+<% else %>
+	<h3>No Schools found. Please create one!</h3>
+<% end %>
+
+<%= link_to 'New School', new_school_path %>

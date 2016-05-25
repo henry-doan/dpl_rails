@@ -1,0 +1,21 @@
+<%= form_for @school do |f| %>
+	<%= f.label :name%>
+	<%= f.text_field :name %>
+
+	<%= f.label :year_built%>
+	<%= f.text_field :year_built%>
+
+	<%= f.submit %>
+<% end %>
+
+<!--
+  <form action='/schools' method='POST'>
+    <label>Name</label>
+    <input type='text' name='school[name]' />
+
+    <label>Year Built</label>
+    <input type='text' name='school[year_built]' />
+
+    <input type='submit' />
+  </form>
+—>
